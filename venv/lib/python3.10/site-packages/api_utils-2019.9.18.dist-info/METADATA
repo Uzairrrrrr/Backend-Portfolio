@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: api-utils
+Version: 2019.9.18
+Summary: API utils simplify life when creating or consuming APIs
+Home-page: https://pypi.org/project/api-utils/
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# API utils
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+API utils simplify life when creating or consuming APIs
+
+## Module: apiu.path
+
+### Method: apiu.path.join()
+
+Join one or more path components intelligently.
+
+Rules:
+- If any component starts with "http", all previous parts will be discarded.
+- The returned path will always start with "/", except if it starts with "http".
+- The returned path will never end with "/", except when ending in a protocol
+	notation ("://") or enforced (see below)
+- A trailing slash can be enforced with a final component "/"
+- Empty strings are skipped
+
+
