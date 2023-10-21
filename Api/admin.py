@@ -6,6 +6,7 @@ class AboutAdmin(admin.ModelAdmin):
     list_display = ('content1', 'content2', 'content3', 'content4')
 
 admin.site.register(About, AboutAdmin)
+# verbos_name = "About"
 
 class WorkAdmin(admin.ModelAdmin):
     list_display = ('date', 'heading', 'content')

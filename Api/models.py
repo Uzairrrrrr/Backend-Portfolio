@@ -7,6 +7,9 @@ class About(models.Model):
     content3 = models.CharField(max_length=2000)
     content4 = models.CharField(max_length=2000)
 
+    class Meta:
+        verbose_name = "About"
+
 class Work(models.Model):
     date = models.DateField(blank=True, null=True)
     heading = models.CharField(max_length=100, blank=True, null=True)
@@ -25,7 +28,8 @@ class Services(models.Model):
 
 class WorkDone(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
-    image = models.ImageField(upload_to='static/images/',null=True,blank=True)
+    image_display = models.ImageField(upload_to='static/images/',null=True,blank=True)
+    image_inside = models.ImageField(upload_to='static/images/',null=True,blank=True)
     brand = models.CharField(max_length=100, blank=True, null=True)
     content = models.CharField(max_length=100)
 
