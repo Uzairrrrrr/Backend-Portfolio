@@ -11,13 +11,13 @@ class About(models.Model):
         verbose_name = "About"
 
 class Work(models.Model):
-    date = models.DateField(blank=True, null=True)
+    date = models.CharField(max_length=100, blank=True, null=True)
     heading = models.CharField(max_length=100, blank=True, null=True)
     post = models.CharField(max_length=100, blank=True, null=True)
     content = models.CharField(max_length=2000)
 
 class Education(models.Model):
-    date = models.DateField(blank=True, null=True)
+    date = models.CharField(max_length=100, blank=True, null=True)
     heading = models.CharField(max_length=100, blank=True, null=True)
     degree = models.CharField(max_length=100, blank=True, null=True)
     content = models.CharField(max_length=2000)
