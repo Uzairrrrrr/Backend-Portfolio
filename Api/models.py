@@ -25,13 +25,13 @@ class Education(models.Model):
 class Services(models.Model):
     heading = models.CharField(max_length=200)
     content = models.CharField(max_length=2000)
+    
+class CV_link(models.Model):
+    url = models.CharField(max_length=100, blank= True, null=True)   
 
 class WorkDone(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
-    image_display = models.ImageField(upload_to='static/images/',null=True,blank=True)
-    image_inside = models.ImageField(upload_to='static/images/',null=True,blank=True)
-    brand = models.CharField(max_length=100, blank=True, null=True)
-    content = models.CharField(max_length=100)
+    content = models.CharField(max_length=10000)
 
 class Testimonials(models.Model):
     content = models.CharField(max_length=1000, blank=True, null=True)

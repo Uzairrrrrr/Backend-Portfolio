@@ -1,12 +1,11 @@
 from django.contrib import admin
-from .models import  About, Work, Education, Services, WorkDone, Testimonials
+from .models import  About, Work, Education, Services, WorkDone, Testimonials, CV_link
 
 
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('content1', 'content2', 'content3', 'content4')
 
 admin.site.register(About, AboutAdmin)
-# verbos_name = "About"
 
 class WorkAdmin(admin.ModelAdmin):
     list_display = ('date', 'heading', 'content')
@@ -24,11 +23,14 @@ class ServicesAdmin(admin.ModelAdmin):
 admin.site.register(Services, ServicesAdmin)
 
 class WorkDoneAdmin(admin.ModelAdmin):
-    list_display = ('name', 'brand', 'content')
+    list_display = ('name', 'content')
 
 admin.site.register(WorkDone, WorkDoneAdmin)
 
 class TestimonialsAdmin(admin.ModelAdmin):
     list_display = ('name', 'post', 'content')
-
 admin.site.register(Testimonials, TestimonialsAdmin)
+
+class CV_linkAdmin(admin.ModelAdmin):
+    list_display = ('url',)
+admin.site.register(CV_link, CV_linkAdmin)
