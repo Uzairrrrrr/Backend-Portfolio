@@ -19,7 +19,7 @@
     ================================================== -->
     <link rel="stylesheet" href="{% static "css/base.css" %}">
     <link rel="stylesheet" href="{% static "css/vendor.css" %}">
-    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}?v=1.0">
 
     <!-- script
     ================================================== -->
@@ -47,7 +47,7 @@
 
         <div class="header-logo">
             <a class="site-logo">
-                {% comment %} <img src="{% static "images/logo.svg" %}" alt="Homepage"> {% endcomment %}
+                <img src="{% static "images/Logo (1).svg" %}" alt="Homepage">
             </a>
         </div>
 
@@ -83,7 +83,7 @@
                 <h3>Hey, I'm Uzair</h3>
                 <h1>
                     Backend Developer <br>
-                    and Web Developer <br>
+                    & Web Developer <br>
                     Based In Somewhere.
                 </h1>
             </div>
@@ -95,7 +95,8 @@
             </div>
 
             <div class="intro-grid"></div>
-            <div class="intro-pic"></div>
+            <div class="intro-pic">
+            </div>
 
         </div> <!-- end row -->
 
@@ -271,12 +272,13 @@
                 <h2 class="section-heading section-heading--centerbottom">Selected Works</h2>
                 <p class="section-desc">
                     Here are some of my selected works I have done lately. Feel free to 
-                    check them out.
+                    check them out on my GitHub.
                 </p>
+                <br> <br> <br>
             </div>
         </div> <!-- end heading-block -->
 
-        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+        <div class="row block-large-1-3 block-medium-1-2 block-tab-full">
             
             {% for WorkDone in work_done_data %} 
             <div class="column item-service" data-aos="fade-up">
