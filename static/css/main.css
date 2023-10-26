@@ -1511,7 +1511,7 @@ input::-moz-focus-inner {
   font-weight: 500;
   line-height: 1.222;
   margin-top: 0;
-  color: #cf1767;
+  color: black;
 }
 
 .ss-dark .section-heading,
@@ -3638,3 +3638,11 @@ html[data-useragent*='rv:11.0'] .ss-go-top::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+.item-heading {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 1.222;
+  margin-top: 0;
+  color: #cf1767;
+}

@@ -19,7 +19,7 @@
     ================================================== -->
     <link rel="stylesheet" href="{% static "css/base.css" %}">
     <link rel="stylesheet" href="{% static "css/vendor.css" %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
 
     <!-- script
     ================================================== -->
@@ -92,9 +92,6 @@
                 <a href="#about" class="intro-scroll-link smoothscroll">
                     Scroll For More
                 </a>
-                <div class="ss-go-down">
-                    <a class="smoothscroll" href="#about"></a>
-                </div>
             </div>
             <div class="intro-grid"></div>
             <div class="intro-pic">
@@ -285,10 +282,11 @@
             {% for WorkDone in work_done_data %} 
             <div class="column item-service" data-aos="fade-up">
                 <div class="item-service__content">
-                    <h4 class="item-title">{{ WorkDone.name }}</h4>
+                    <h4 class="item-heading">{{ WorkDone.name }}</h4>
                     <p>
                     {{ WorkDone.content }}<br>
                 </p>
+                <br> <br>
             </div>
         </div>
         {% endfor %} <!-- end masonry-wrap -->
