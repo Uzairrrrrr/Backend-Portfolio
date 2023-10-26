@@ -35,7 +35,7 @@ class WorkDone(models.Model):
 
 class Testimonials(models.Model):
     content = models.CharField(max_length=1000, blank=True, null=True)
-    image = models.ImageField(upload_to='static/images/')
+    image = models.ImageField(upload_to='media/static/images')
     name = models.CharField(max_length=50, blank=True, null=True)
     post = models.CharField(max_length=100, blank=True, null=True)  
       
