@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-az7-o=!m!g1p#x=akz@nbw%gf_fhoc!$x-ijt@ae+2ef47u36$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['Uzair12.pythonanywhere.com']
 
 # Application definition
 
@@ -38,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Api',
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -48,9 +48,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
-
+CORS_URLS_REGEX = r'^/api/.*$'
+CORS_ALLOWED_ORIGINS = False
 ROOT_URLCONF = 'portfolio.urls'
+CORS_ALLOWED_ORIGINS = ['https://example.com', 'https://Uzair12.pythonanywhere.com']
 
 TEMPLATES = [
     {
@@ -119,7 +123,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(STATIC_URL, 'static')
 MEDIA_URL = '/media/'
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
