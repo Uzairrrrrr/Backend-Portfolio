@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import  About, Work, Education, Services, WorkDone, Testimonials, CV_link
+from .models import  About, Work, Education, Services, WorkDone, Testimonials
 
 
 class AboutAdmin(admin.ModelAdmin):
@@ -30,7 +30,3 @@ admin.site.register(WorkDone, WorkDoneAdmin)
 class TestimonialsAdmin(admin.ModelAdmin):
     list_display = ('name', 'post', 'content')
 admin.site.register(Testimonials, TestimonialsAdmin)
-
-class CV_linkAdmin(admin.ModelAdmin):
-    list_display = ('url',)
-admin.site.register(CV_link, CV_linkAdmin)

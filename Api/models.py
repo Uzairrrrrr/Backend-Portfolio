@@ -6,10 +6,7 @@ class About(models.Model):
     content2 = models.CharField(max_length=2000)
     content3 = models.CharField(max_length=2000)
     content4 = models.CharField(max_length=2000)
-
-    class Meta:
-        verbose_name = "About"
-
+    
 class Work(models.Model):
     date = models.CharField(max_length=100, blank=True, null=True)
     heading = models.CharField(max_length=100, blank=True, null=True)
@@ -25,9 +22,6 @@ class Education(models.Model):
 class Services(models.Model):
     heading = models.CharField(max_length=200)
     content = models.CharField(max_length=2000)
-    
-class CV_link(models.Model):
-    url = models.CharField(max_length=100, blank= True, null=True)   
 
 class WorkDone(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
