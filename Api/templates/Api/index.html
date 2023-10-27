@@ -46,8 +46,8 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo">
-                <img src="{% static "images/Logo (1).svg" %}" alt="Homepage">
+            <a href="#" onclick="location.reload();" class="site-logo">
+                <img  src="{% static "images/Logo (1).svg" %}" alt="Homepage">
             </a>
         </div>
 
@@ -131,6 +131,7 @@
                     <p>
                     {{ About.content4 }}
                     </p>
+                    
                 </div>
             </div>
             {% endfor %} 
@@ -138,11 +139,9 @@
                 <div class="column large-half tab-full" data-aos="fade-up">
                     <a href="https://www.linkedin.com/in/muhammad-uzair-340394257/" class="btn btn--stroke full-width" target="_blank">Hire Me</a>
                 </div>
-                {% for CV_link in CV_link_data %}
                 <div class="column large-half tab-full" data-aos="fade-up">
-                    <a href="{{ CV_link.url }}" class="btn btn--primary full-width"target="_blank">Download CV</a>
+                    <a href="{% static 'CV_MUHAMMAD UZAIR_2023-2.pdf' %}" class="btn btn--primary full-width"target="_blank" download='CV_MUHAMMAD UZAIR_2023-2.pdf'>Download CV</a>
                 </div>
-                {% endfor %}
             </div>
 
         </div> <!-- end about-me -->
